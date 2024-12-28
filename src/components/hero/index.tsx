@@ -7,6 +7,7 @@ import { LinkPreview } from '../ui/link-preview'
 import "@theme-toggles/react/css/Expand.css"
 import { Expand } from "@theme-toggles/react"
 import { useTheme } from 'next-themes'
+import { Button } from '../ui/button'
 import { ThemeToggle } from '../ui/theme-toggle'
 
 
@@ -14,7 +15,17 @@ type Props = {}
 
 function Hero({ }: Props) {
 
+  const { theme, setTheme } = useTheme()
 
+  const toggleTheme = () => {
+
+    if (theme === "dark") {
+      setTheme("light")
+    } else {
+      setTheme("dark")
+    }
+
+  }
 
   return (
     <div className="h-[40rem] flex flex-col pt-20 items-center justify-center">
@@ -25,7 +36,6 @@ function Hero({ }: Props) {
           @Fibr.ai
         </LinkPreview>{" "}
       </p>
-      <ThemeToggle />
     </div>
 
   )
