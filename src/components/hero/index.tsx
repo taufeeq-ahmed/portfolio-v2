@@ -32,7 +32,7 @@ function Hero({ }: Props) {
       <BackgroundLines className="flex items-center justify-center w-full flex-col px-4">
         <TextHoverEffect text="Taufeeq" />
         <p className="
-          text-neutral-500 dark:text-neutral-400 text-xl sm:text-5xl mx-auto mb-10 font-semibold
+          text-neutral-500 dark:text-neutral-400 text-xl sm:text-5xl mx-auto mb-16 font-semibold
           relative bottom-48 z-[100]
         ">
           Senior Frontend Engineer {" "}
