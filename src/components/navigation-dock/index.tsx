@@ -77,7 +77,7 @@ const links = [
 
 function NavigationDock({}: Props) {
   return (
-    <div className="flex items-center justify-center h-[35rem] w-full h-fit fixed sm:bottom-4 sm:left-0 sm:right-0">
+    <div className="flex items-center justify-center w-fit sm:w-full sm:h-fit fixed bottom-24 right-4 sm:bottom-4 sm:left-0 sm:right-0">
       <FloatingDock
         mobileClassName="translate-y-20" 
         items={links}
