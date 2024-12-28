@@ -28,14 +28,19 @@ function Hero({ }: Props) {
   }
 
   return (
-    <div className="h-[40rem] flex flex-col pt-20 items-center justify-center">
-      <TextHoverEffect text="Taufeeq" />
-      <p className="text-neutral-500 dark:text-neutral-400 text-xl sm:text-5xl mx-auto mb-10 relative bottom-8 font-semibold">
-        Senior Frontend Engineer {" "}
-        <LinkPreview url="https://fibr.ai/" className="font-bold">
-          @Fibr.ai
-        </LinkPreview>{" "}
-      </p>
+    <div className="h-screen flex flex-col items-center justify-center">
+      <BackgroundLines className="flex items-center justify-center w-full flex-col px-4">
+        <TextHoverEffect text="Taufeeq" />
+        <p className="
+          text-neutral-500 dark:text-neutral-400 text-xl sm:text-5xl mx-auto mb-10 font-semibold
+          relative bottom-48 z-[100]
+        ">
+          Senior Frontend Engineer {" "}
+          <LinkPreview url="https://fibr.ai/" className="font-bold">
+            @Fibr.ai
+          </LinkPreview>{" "}
+        </p>
+      </BackgroundLines>
     </div>
 
   )
