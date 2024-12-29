@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { AnimatedCards } from '../ui/animated-cards';
 import { cogoportExperienceCards, fibrExperienceCards } from '@/lib/constants';
 import { CardStack } from '../ui/card-stack';
+import { LinkPreview } from '../ui/link-preview';
 
 type Props = {}
 
@@ -16,7 +17,11 @@ function Experience({ }: Props) {
             content: (
                 <div>
                     <div className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-                        <h2 className='text-6xl font-bold mb-4'>Fibr.ai</h2>
+                        <h2 className='text-6xl font-bold mb-4'>
+                            <LinkPreview url="https://app.getfibr.co/" className="font-bold">
+                                Fibr.ai
+                            </LinkPreview>
+                        </h2>
                         <p className='text-4xl font-semibold opacity-80'>Senior Frontend Engineer</p>
                     </div>
                     <div className="flex flex-col gap-4">
@@ -42,7 +47,11 @@ function Experience({ }: Props) {
             content: (
                 <div>
                     <div className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-                        <h2 className='text-6xl font-bold mb-4'>Cogoport</h2>
+                        <h2 className='text-6xl font-bold mb-4'>
+                            <LinkPreview url="https://www.cogoport.com/en-IN" className="font-bold">
+                                Cogoport
+                            </LinkPreview>
+                        </h2>
                         <p className='text-4xl font-semibold opacity-80'>Associate Software Engineer</p>
                     </div>
                     <div className="flex gap-4">
