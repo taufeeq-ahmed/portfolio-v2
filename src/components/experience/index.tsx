@@ -1,7 +1,8 @@
 import React from 'react'
 import { Timeline } from '../ui/timeline';
 import Image from 'next/image';
-import { ExpandableCards } from '../ui/animated-cards';
+import { AnimatedCards, ExpandableCards } from '../ui/animated-cards';
+import { cogoportExperienceCards } from '@/lib/constants';
 
 type Props = {}
 
@@ -16,7 +17,7 @@ function Experience({ }: Props) {
                         <p className='text-4xl font-semibold opacity-80'>SDE-1 (Associate Software Engineer)</p>
                     </div>
                     <div className="grid grid-cols-2 gap-4">
-                        {/* <ExpandableCards /> */}
+                        <AnimatedCards cards={cogoportExperienceCards} />
                     </div>
                 </div>
             ),
