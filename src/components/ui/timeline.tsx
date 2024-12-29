@@ -13,15 +13,10 @@ interface TimelineEntry {
     content: React.ReactNode;
 }
 
-export function Timeline({ data }: { data: TimelineEntry[] }) {
+export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
     const ref = useRef<HTMLDivElement>(null);
     const containerRef = useRef<HTMLDivElement>(null);
     const [height, setHeight] = useState(0);
-    const [mounted, setMounted] = useState(false);
-
-    useEffect(() => {
-        setMounted(true);
-    }, []);
 
     useEffect(() => {
         if (ref.current) {
@@ -38,13 +33,9 @@ export function Timeline({ data }: { data: TimelineEntry[] }) {
     const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
     const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
-    if (!mounted) {
-        return null;
-    }
-
     return (
         <div
-            className="w-full bg-white dark:bg-neutral-950 font-sans md:px-10"
+            className="w-full bg-white dark:bg-black font-sans md:px-10"
             ref={containerRef}
         >
             <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
@@ -96,4 +87,4 @@ export function Timeline({ data }: { data: TimelineEntry[] }) {
             </div>
         </div>
     );
-}
+};

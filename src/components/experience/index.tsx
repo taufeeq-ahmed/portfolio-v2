@@ -1,13 +1,42 @@
+"use client "
+
 import React from 'react'
 import { Timeline } from '../ui/timeline';
 import Image from 'next/image';
-import { AnimatedCards, ExpandableCards } from '../ui/animated-cards';
-import { cogoportExperienceCards } from '@/lib/constants';
+import { AnimatedCards } from '../ui/animated-cards';
+import { cogoportExperienceCards, fibrExperienceCards } from '@/lib/constants';
+import { CardStack } from '../ui/card-stack';
 
 type Props = {}
 
 function Experience({ }: Props) {
     const data = [
+        {
+            title: "July 2024",
+            content: (
+                <div>
+                    <div className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+                        <h2 className='text-6xl font-bold mb-4'>Fibr.ai</h2>
+                        <p className='text-4xl font-semibold opacity-80'>Senior Frontend Engineer</p>
+                    </div>
+                    <div className="flex flex-col gap-4">
+                        <ul className="list-disc pl-4 text-lg font-medium ">
+                            <li className="mb-2">
+                                Developed a Personalized Dashboard for controlling the A/B testing experience of the product and helped
+                                Fibr.Ai scale to a revenue of $80K per month
+                            </li>
+                            <li className="mb-2">
+                                Created a components library for standardizing the UI across the product and enforcing consistent visual
+                                experience in Typescript
+                            </li>
+                        </ul>
+                        <div className="mt-8 flex items-start justify-center w-full z-0 relative min-h-[60vh] ">
+                            <CardStack items={fibrExperienceCards} />
+                        </div>
+                    </div>
+                </div>
+            ),
+        },
         {
             title: "March 2023",
             content: (
@@ -16,110 +45,8 @@ function Experience({ }: Props) {
                         <h2 className='text-6xl font-bold mb-4'>Cogoport</h2>
                         <p className='text-4xl font-semibold opacity-80'>SDE-1 (Associate Software Engineer)</p>
                     </div>
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="flex gap-4">
                         <AnimatedCards cards={cogoportExperienceCards} />
-                    </div>
-                </div>
-            ),
-        },
-        {
-            title: "Early 2023",
-            content: (
-                <div>
-                    <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-                        I usually run out of copy, but when I see content this big, I try to
-                        integrate lorem ipsum.
-                    </p>
-                    <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-                        Lorem ipsum is for people who are too lazy to write copy. But we are
-                        not. Here are some more example of beautiful designs I built.
-                    </p>
-                    <div className="grid grid-cols-2 gap-4">
-                        <Image
-                            src="https://assets.aceternity.com/pro/hero-sections.png"
-                            alt="hero template"
-                            width={500}
-                            height={500}
-                            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-                        />
-                        <Image
-                            src="https://assets.aceternity.com/features-section.png"
-                            alt="feature template"
-                            width={500}
-                            height={500}
-                            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-                        />
-                        <Image
-                            src="https://assets.aceternity.com/pro/bento-grids.png"
-                            alt="bento template"
-                            width={500}
-                            height={500}
-                            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-                        />
-                        <Image
-                            src="https://assets.aceternity.com/cards.png"
-                            alt="cards template"
-                            width={500}
-                            height={500}
-                            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-                        />
-                    </div>
-                </div>
-            ),
-        },
-        {
-            title: "Changelog",
-            content: (
-                <div>
-                    <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-4">
-                        Deployed 5 new components on Aceternity today
-                    </p>
-                    <div className="mb-8">
-                        <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-                            ✅ Card grid component
-                        </div>
-                        <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-                            ✅ Startup template Aceternity
-                        </div>
-                        <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-                            ✅ Random file upload lol
-                        </div>
-                        <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-                            ✅ Himesh Reshammiya Music CD
-                        </div>
-                        <div className="flex gap-2 items-center text-neutral-700 dark:text-neutral-300 text-xs md:text-sm">
-                            ✅ Salman Bhai Fan Club registrations open
-                        </div>
-                    </div>
-                    <div className="grid grid-cols-2 gap-4">
-                        <Image
-                            src="https://assets.aceternity.com/pro/hero-sections.png"
-                            alt="hero template"
-                            width={500}
-                            height={500}
-                            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-                        />
-                        <Image
-                            src="https://assets.aceternity.com/features-section.png"
-                            alt="feature template"
-                            width={500}
-                            height={500}
-                            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-                        />
-                        <Image
-                            src="https://assets.aceternity.com/pro/bento-grids.png"
-                            alt="bento template"
-                            width={500}
-                            height={500}
-                            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-                        />
-                        <Image
-                            src="https://assets.aceternity.com/cards.png"
-                            alt="cards template"
-                            width={500}
-                            height={500}
-                            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
-                        />
                     </div>
                 </div>
             ),
