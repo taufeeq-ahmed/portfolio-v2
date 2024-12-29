@@ -4,7 +4,7 @@ import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "@/hooks/use-outside-click";
 
-export function ExpandableCards() {
+export function AnimatedCards() {
     const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
         null
     );
@@ -73,16 +73,16 @@ export function ExpandableCards() {
                             <motion.div layoutId={`image-${active.title}-${id}`}>
                                 <Image
                                     priority
-                                    width={200}
-                                    height={200}
+                                    width={1200}
+                                    height={1200}
                                     src={active.src}
                                     alt={active.title}
-                                    className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
+                                    className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-left-top"
                                 />
                             </motion.div>
 
                             <div>
-                                <div className="flex justify-between items-start p-4">
+                                <div className="flex justify-between items-center p-4">
                                     <div className="">
                                         <motion.h3
                                             layoutId={`title-${active.title}-${id}`}
@@ -139,14 +139,14 @@ export function ExpandableCards() {
                         <div className="flex gap-4 flex-col  w-full">
                             <motion.div layoutId={`image-${card.title}-${id}`}>
                                 <Image
-                                    width={100}
-                                    height={100}
+                                    width={1200}
+                                    height={1200}
                                     src={card.src}
                                     alt={card.title}
-                                    className="h-60 w-full  rounded-lg object-cover object-top"
+                                    className="h-60 w-full  rounded-lg object-cover object-left-top"
                                 />
                             </motion.div>
-                            <div className="flex justify-center items-center flex-col">
+                            <div className="flex justify-center items-start flex-col">
                                 <motion.h3
                                     layoutId={`title-${card.title}-${id}`}
                                     className="text-neutral-800 dark:text-neutral-200 text-center md:text-left text-2xl font-semibold"
@@ -214,18 +214,11 @@ const cards = [
         ctaLink: "https://academy.cogoport.com",
         content: () => {
             return (
-                <p>
-                    Lana Del Rey, an iconic American singer-songwriter, is celebrated for
-                    her melancholic and cinematic music style. Born Elizabeth Woolridge
-                    Grant in New York City, she has captivated audiences worldwide with
-                    her haunting voice and introspective lyrics. <br /> <br /> Her songs
-                    often explore themes of tragic romance, glamour, and melancholia,
-                    drawing inspiration from both contemporary and vintage pop culture.
-                    With a career that has seen numerous critically acclaimed albums, Lana
-                    Del Rey has established herself as a unique and influential figure in
-                    the music industry, earning a dedicated fan base and numerous
-                    accolades.
-                </p>
+                <ul className="list-disc">
+                    <li>Led a team to build a full stack application that is used for training new employess at the company.</li>
+                    <li>has features like coding exercices with code editor and testcases, project submissions and articles. </li>
+                    <li>has admin dashboards to control the curriculum in the applications and also give grades to the students.</li>
+                </ul>
             );
         },
     },
@@ -237,7 +230,7 @@ const cards = [
         ctaLink: "https://ui.aceternity.com/templates",
         content: () => {
             return (
-                <p>
+                <ul>
                     Babu Maan, a legendary Punjabi singer, is renowned for his soulful
                     voice and profound lyrics that resonate deeply with his audience. Born
                     in the village of Khant Maanpur in Punjab, India, he has become a
@@ -247,7 +240,7 @@ const cards = [
                     over two decades, Babu Maan has released numerous hit albums and
                     singles that have garnered him a massive fan following both in India
                     and abroad.
-                </p>
+                </ul>
             );
         },
     },
