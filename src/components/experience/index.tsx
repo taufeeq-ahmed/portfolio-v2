@@ -43,7 +43,7 @@ function Experience({ }: Props) {
                 <div>
                     <div className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
                         <h2 className='text-6xl font-bold mb-4'>Cogoport</h2>
-                        <p className='text-4xl font-semibold opacity-80'>SDE-1 (Associate Software Engineer)</p>
+                        <p className='text-4xl font-semibold opacity-80'>Associate Software Engineer</p>
                     </div>
                     <div className="flex gap-4">
                         <AnimatedCards cards={cogoportExperienceCards} />
