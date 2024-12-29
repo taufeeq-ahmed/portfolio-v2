@@ -4,28 +4,11 @@ import React, { useState } from 'react'
 import { BackgroundLines } from '../ui/background-lines'
 import { TextHoverEffect } from '../ui/text-hover-effect'
 import { LinkPreview } from '../ui/link-preview'
-import "@theme-toggles/react/css/Expand.css"
-import { Expand } from "@theme-toggles/react"
-import { useTheme } from 'next-themes'
-import { Button } from '../ui/button'
-import { ThemeToggle } from '../ui/theme-toggle'
 
 
 type Props = {}
 
 function Hero({ }: Props) {
-
-  const { theme, setTheme } = useTheme()
-
-  const toggleTheme = () => {
-
-    if (theme === "dark") {
-      setTheme("light")
-    } else {
-      setTheme("dark")
-    }
-
-  }
 
   return (
     <div className="h-screen flex flex-col items-center justify-center">
