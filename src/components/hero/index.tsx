@@ -33,11 +33,11 @@ function Hero({ }: Props) {
         <TextHoverEffect text="Taufeeq" />
         <p className="
           text-neutral-500 dark:text-neutral-400 text-xl sm:text-5xl mx-auto mb-16 font-semibold
-          relative bottom-48 z-[100]
+          relative bottom-48 z-[100] text-center
         ">
-          Senior Frontend Engineer {" "}
-          <LinkPreview url="https://fibr.ai/" className="font-bold">
-            @Fibr.ai
+          Senior Frontend Engineer (SDE-II) {" "}
+          <LinkPreview url="https://hydden.com/" className="font-bold">
+            @Hydden
           </LinkPreview>{" "}
         </p>
       </BackgroundLines>
