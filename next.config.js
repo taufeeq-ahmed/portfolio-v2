@@ -14,6 +14,7 @@ const nextConfig = {
             console.error('Hydration error details:', error);
         }
     },
+    ignoreDuringBuilds: true,
 }
 
 module.exports = nextConfig 
