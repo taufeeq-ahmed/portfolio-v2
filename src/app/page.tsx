@@ -5,9 +5,9 @@ import NavigationDock from "@/components/navigation-dock";
 
 export default function Home() {
   return (
-    <main className="h-screen overflow-scroll">
+    <main className="h-screen">
       <Hero />
-      {/* <About /> */}
+      <About />
       {/* <Experience /> */}
       {/* <NavigationDock /> */}
     </main>
