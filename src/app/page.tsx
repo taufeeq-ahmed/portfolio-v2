@@ -3,15 +3,13 @@ import Experience from "@/components/experience";
 import Hero from "@/components/hero";
 import NavigationDock from "@/components/navigation-dock";
 
-
 export default function Home() {
-
   return (
-    <main>
+    <main className="h-screen overflow-scroll">
       <Hero />
-      <About />
-      <Experience />
-      <NavigationDock />
+      {/* <About /> */}
+      {/* <Experience /> */}
+      {/* <NavigationDock /> */}
     </main>
   );
 }
