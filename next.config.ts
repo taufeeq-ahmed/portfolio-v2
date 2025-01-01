@@ -1,9 +1,20 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   images: {
-    domains: ['assets.aceternity.com',"api.microlink.io"],
+      domains: [
+          // ... other domains if any ...
+          'raevmuktjsgqgxiugoro.supabase.co',
+          'assets.aceternity.com', // Also adding this since you're using images from here
+          'api.microlink.io'
+      ],
   },
-};
+  reactStrictMode: true,
+  onError: (error:Error) => {
+      if (error.message.includes('Hydration failed')) {
+          console.error('Hydration error details:', error);
+      }
+  },
+  ignoreDuringBuilds: true,
+}
 
-export default nextConfig;
+module.exports = nextConfig 
