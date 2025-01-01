@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { motion } from "framer-motion";
 
 import { FloatingDock } from "@/components/ui/floating-dock";
 import {
@@ -76,9 +77,14 @@ const links = [
 
 function NavigationDock({}: Props) {
   return (
-    <div className="flex items-center justify-center z-10 w-fit h-fit mx-auto fixed bottom-4 left-0 right-0">
+    <motion.div
+      initial={{ y: 100 }}
+      animate={{ y: 0 }}
+      transition={{ duration: 0.5, delay: 1, type: "spring" }}
+      className="flex items-center justify-center z-10 w-fit h-fit mx-auto fixed bottom-4 left-0 right-0"
+    >
       <FloatingDock items={links} />
-    </div>
+    </motion.div>
   );
 }
 
