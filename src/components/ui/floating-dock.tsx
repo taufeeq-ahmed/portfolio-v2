@@ -23,18 +23,15 @@ interface DockItem {
 interface FloatingDockProps {
   items: DockItem[];
   desktopClassName?: string;
-  mobileClassName?: string;
 }
 
 export const FloatingDock = ({
   items,
   desktopClassName,
-  mobileClassName,
 }: FloatingDockProps) => {
   return (
     <>
       <FloatingDockDesktop items={items} className={desktopClassName} />
-      <FloatingDockMobile items={items} className={mobileClassName} />
     </>
   );
 };
@@ -43,60 +40,6 @@ interface FloatingDockComponentProps {
   items: DockItem[];
   className?: string;
 }
-
-const FloatingDockMobile = ({
-  items,
-  className,
-}: FloatingDockComponentProps) => {
-  const [open, setOpen] = useState(true);
-  return (
-    <div className={cn("relative block sm:hidden", className)}>
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            layoutId="nav"
-            className="absolute bottom-full mb-2 inset-x-0 flex flex-col gap-2 z-99"
-          >
-            {items.map((item, idx) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                exit={{
-                  opacity: 0,
-                  y: 10,
-                  transition: {
-                    delay: idx * 0.05,
-                  },
-                }}
-                transition={{ delay: (items.length - 1 - idx) * 0.05 }}
-              >
-                <div onClick={item.onClick}>
-                  <Link
-                    href={item.href}
-                    key={item.title}
-                    className="h-10 w-10 rounded-full bg-gray-50 dark:bg-neutral-900 flex items-center justify-center"
-                  >
-                    <div className="h-4 w-4">{item.icon}</div>
-                  </Link>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        )}
-      </AnimatePresence>
-      <button
-        onClick={() => setOpen(!open)}
-        className="h-10 w-10 rounded-full bg-gray-50 dark:bg-neutral-800 flex items-center justify-center"
-      >
-        <IconLayoutNavbarCollapse className={`h-5 w-5 text-neutral-500 duration-200 dark:text-neutral-400 ${open && "rotate-180"}`} />
-      </button>
-    </div>
-  );
-};
 
 const FloatingDockDesktop = ({
   items,
@@ -108,7 +51,7 @@ const FloatingDockDesktop = ({
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
       className={cn(
-        "mx-auto hidden sm:flex h-16 gap-4 items-end rounded-2xl bg-gray-50 dark:bg-neutral-900 px-4 pb-3",
+        "mx-auto flex h-14 sm:h-16 gap-2 sm:gap-4 items-end rounded-2xl bg-gray-50 dark:bg-neutral-900 px-2 sm:px-4 pb-2 sm:pb-3 ",
         className
       )}
     >
@@ -202,4 +145,4 @@ function IconContainer({
       </motion.div>
     </Link>
   );
-} 
+}

@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react'
+import React from "react";
 
 import { FloatingDock } from "@/components/ui/floating-dock";
 import {
@@ -13,10 +13,9 @@ import {
   IconCode,
 } from "@tabler/icons-react";
 
+import { socials } from "@/lib/utils";
 
-import { socials } from '@/lib/utils';
-
-type Props = {}
+type Props = {};
 
 const links = [
   {
@@ -33,7 +32,7 @@ const links = [
       <IconFileCv className="h-full w-full text-neutral-500 dark:text-neutral-300" />
     ),
     onClick: () => {
-      // TODO: add resume 
+      // TODO: add resume
       alert("Resume");
     },
     href: "#",
@@ -77,13 +76,10 @@ const links = [
 
 function NavigationDock({}: Props) {
   return (
-    <div className="flex items-center justify-center w-fit sm:w-full sm:h-fit fixed bottom-24 right-4 sm:bottom-4 sm:left-0 sm:right-0 ">
-      <FloatingDock
-        mobileClassName="translate-y-20" 
-        items={links}
-      />
+    <div className="flex items-center justify-center z-10 w-fit h-fit mx-auto fixed bottom-4 left-0 right-0">
+      <FloatingDock items={links} />
     </div>
-  )
+  );
 }
 
-export default NavigationDock
+export default NavigationDock;
