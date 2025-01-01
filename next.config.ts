@@ -8,13 +8,15 @@ const nextConfig = {
           'api.microlink.io'
       ],
   },
+  eslint:{
+    ignoreDuringBuilds: true,
+  },
   reactStrictMode: true,
   onError: (error:Error) => {
       if (error.message.includes('Hydration failed')) {
           console.error('Hydration error details:', error);
       }
   },
-  ignoreDuringBuilds: true,
 }
 
 module.exports = nextConfig 
