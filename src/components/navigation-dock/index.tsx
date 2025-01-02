@@ -24,7 +24,7 @@ const links = [
     icon: (
       <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
     ),
-    href: "#",
+    href: "#home",
   },
 
   {
@@ -33,8 +33,12 @@ const links = [
       <IconFileCv className="h-full w-full text-neutral-500 dark:text-neutral-300" />
     ),
     onClick: () => {
-      // TODO: add resume
-      alert("Resume");
+      const link = document.createElement("a");
+      link.href = "/taufeeq-ahmed-resume.pdf";
+      link.download = "taufeeq-ahmed-resume.pdf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
     },
     href: "#",
   },
@@ -43,15 +47,15 @@ const links = [
     icon: (
       <IconListDetails className="h-full w-full text-neutral-500 dark:text-neutral-300" />
     ),
-    href: "#",
+    href: "#experience",
   },
-  {
-    title: "Projects",
-    icon: (
-      <IconCode className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-    ),
-    href: "#",
-  },
+  // {
+  //   title: "Projects",
+  //   icon: (
+  //     <IconCode className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+  //   ),
+  //   href: "#",
+  // },
   {
     title: "Email",
     icon: (

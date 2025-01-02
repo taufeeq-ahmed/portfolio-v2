@@ -16,7 +16,8 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Taufeeq Ahmed",
   description: "A very passionate Full Stack Engineer",
-  keywords: "developer engineer fullstack full-stack react frontend software next typescript shadcn ui sde"
+  keywords:
+    "developer engineer fullstack full-stack react frontend software next typescript shadcn ui sde",
 };
 
 export default function RootLayout({
@@ -27,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black scroll-smooth`}
         suppressHydrationWarning
       >
         <ThemeProvider
@@ -37,7 +38,6 @@ export default function RootLayout({
         >
           {children}
         </ThemeProvider>
-
       </body>
     </html>
   );

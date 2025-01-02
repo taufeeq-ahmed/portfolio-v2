@@ -63,7 +63,7 @@ function Experience({ }: Props) {
     ];
 
     return (
-        <div className='experience'>
+        <div className='experience' id='experience'>
             <Timeline data={data} />
         </div>
     )

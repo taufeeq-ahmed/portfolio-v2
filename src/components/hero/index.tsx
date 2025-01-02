@@ -11,7 +11,10 @@ type Props = {};
 function Hero({}: Props) {
   return (
     <BackgroundLines className="flex items-center justify-center w-full flex-col px-4 ">
-      <div className="h-scrren sm:h-full flex flex-col justify-center items-center z-10">
+      <div
+        className="h-scrren sm:h-full flex flex-col justify-center items-center z-10"
+        id="home"
+      >
         <div className="w-full">
           <TextHoverEffect text="Taufeeq" />
         </div>
@@ -27,4 +30,3 @@ function Hero({}: Props) {
 }
 
 export default Hero;
-  
