@@ -27,3 +27,4 @@ function Hero({}: Props) {
 }
 
 export default Hero;
+  
