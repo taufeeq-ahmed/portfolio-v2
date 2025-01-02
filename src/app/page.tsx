@@ -8,7 +8,7 @@ export default function Home() {
     <main className="h-screen">
       <Hero />
       <About />
-      {/* <Experience /> */}
+      <Experience />
       <NavigationDock />
     </main>
   );
