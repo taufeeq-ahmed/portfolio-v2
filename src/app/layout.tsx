@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Taufeeq Ahmed",
-  description: "A very passionate Full Stack Engineer",
+  description: "Taufeeq Ahmed's developer portfolio",
   keywords:
     "developer engineer fullstack full-stack react frontend software next typescript shadcn ui sde",
 };
