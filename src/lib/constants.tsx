@@ -1,15 +1,15 @@
 import Image from "next/image";
 
 export const timelineAssets = {
-    cogoAcademy: "https://raevmuktjsgqgxiugoro.supabase.co/storage/v1/object/public/io-bucket/cogo-academy.png?t=2024-12-29T10%3A11%3A12.317Z",
-    worldPortInfo: "https://raevmuktjsgqgxiugoro.supabase.co/storage/v1/object/public/io-bucket/port-info.png?t=2024-12-29T12%3A10%3A09.037Z",
-    notificationSystem: "https://raevmuktjsgqgxiugoro.supabase.co/storage/v1/object/public/io-bucket/notification-system.png?t=2024-12-29T12%3A16%3A03.103Z",
-    tracking: "https://raevmuktjsgqgxiugoro.supabase.co/storage/v1/object/public/io-bucket/tracking.png?t=2024-12-29T12%3A26%3A46.195Z",
-    fibr1: "https://raevmuktjsgqgxiugoro.supabase.co/storage/v1/object/public/io-bucket/fibr-1.png?t=2024-12-29T13%3A56%3A58.928Z",
-    fibr2: "https://raevmuktjsgqgxiugoro.supabase.co/storage/v1/object/public/io-bucket/fibr-2.png?t=2024-12-29T13%3A57%3A31.327Z",
-    fibr3: "https://raevmuktjsgqgxiugoro.supabase.co/storage/v1/object/public/io-bucket/fibr-3.png?t=2024-12-29T13%3A57%3A41.668Z",
-    fibr4: "https://raevmuktjsgqgxiugoro.supabase.co/storage/v1/object/public/io-bucket/fibr-4.png?t=2024-12-29T13%3A57%3A54.565Z"
-}
+    cogoAcademy: "/images/cogo-academy.png",
+    worldPortInfo: "/images/port-info.png",
+    notificationSystem: "/images/notification-system.png",
+    tracking: "/images/tracking.png",
+    fibr1: "/images/fibr-1.png",
+    fibr2: "/images/fibr-2.png",
+    fibr3: "/images/fibr-3.png",
+    fibr4: "/images/fibr-4.png",
+};
 
 export const cogoportExperienceCards = [
     {
